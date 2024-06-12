@@ -204,6 +204,8 @@ namespace WinSize4
                     SetWindowPlacement((IntPtr)this.Windows[currentWindowIndex].hWnd, ref wp);
                     ClsDebug.AddText("  Moving to: " + Left + "  " + Top + "  " + Width + "  " + Height);
                     MoveWindow((IntPtr)this.Windows[currentWindowIndex].hWnd, Left, Top, Width, Height, true);
+                    System.Threading.Thread.Sleep(100);
+                    MoveWindow((IntPtr)this.Windows[currentWindowIndex].hWnd, Left, Top, Width, Height, true);
                 }
             }
             catch
